@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></style>
     <title>Exercise 2</title>
+        <script>
+            function tambah (val1, val2) {
+                var hasil;
+                hasil = parseInt(val1) + parseInt(val2);
+                document.getElementById("hasil").innerHTML = hasil;
+                console.log(hasil);
+            }
+
+            function kurang (val1, val2) {
+                var hasil;
+                hasil = parseInt(val1) - parseInt(val2);
+                document.getElementById("hasil").innerHTML = hasil;
+                console.log(hasil);
+            }
+
+            function kali (val1, val2) {
+                var hasil;
+                hasil = parseInt(val1) * parseInt(val2);
+                document.getElementById("hasil").innerHTML = hasil;
+                console.log(hasil);
+            }
+
+            function bagi (val1, val2) {
+                var hasil;
+                hasil = parseInt(val1) / parseInt(val2);
+                document.getElementById("hasil").innerHTML = hasil;
+                console.log(hasil);
+            }
+
+        </script>
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+        <div class="name">
+            <input type="text" id="bilangan1" />
+            <input type="text" id="bilangan2" />
+            <h2 id="hasil">0</h2>
+            <button onclick="tambah(bilangan1.value, bilangan2.value);" >TAMBAH</button>
+            <button onclick="kurang(bilangan1.value, bilangan2.value);" >KURANG</button>
+            <button onclick="kali(bilangan1.value, bilangan2.value);" >KALI</button>
+            <button onclick="bagi(bilangan1.value, bilangan2.value);" >BAGI</button>
+
+        </div>
 </body>
 </html>
